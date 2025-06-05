@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nature');
             $table->string('beneficiaire');
+            $table->foreignId('demande_autorisation_id')->constrained();
             $table->timestamps();
         });
     }
