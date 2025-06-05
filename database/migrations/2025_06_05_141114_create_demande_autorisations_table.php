@@ -22,6 +22,8 @@ return new class extends Migration
             $table->enum('fichier_joint');
             $table->int('quantite_moto');
             $table->int('valeur');
+            $table->foreignId('personne_physique_id')->constrained();
+            $table->foreignId('personne_morale_id')->constrained();
             $table->timestamps();
         });
     }
